@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Pelanggaran Siswa - SMPN 4 Modoinding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pencatatan Pelanggaran Siswa</h1>
+        <h2>SMP Negeri 4 Modoinding</h2>
+    </header>
+
+    <section class="form-section">
+        <h3>Form Input Pelanggaran</h3>
+        <form id="violationForm">
+            <input type="text" id="nama" placeholder="Nama Siswa" required>
+            <select id="kelas" required>
+                <option value="">Pilih Kelas</option>
+                <option value="7A">7A</option>
+                <option value="8A">8A</option>
+                <option value="9A">9A</option>
+            </select>
+            <input type="date" id="tanggal" required>
+            <input type="text" id="jenis" placeholder="Jenis Pelanggaran" required>
+            <select id="kategori" required>
+                <option value="">Pilih Kategori</option>
+                <option value="Ringan">Ringan</option>
+                <option value="Sedang">Sedang</option>
+                <option value="Berat">Berat</option>
+            </select>
+            <textarea id="tindakan" placeholder="Tindakan / Catatan Guru"></textarea>
+            <button type="submit">Simpan</button>
+        </form>
+    </section>
+
+    <section class="table-section">
+        <h3>Data Pelanggaran</h3>
+        <input type="text" id="search" placeholder="Cari Nama Siswa...">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Tanggal</th>
+                    <th>Pelanggaran</th>
+                    <th>Kategori</th>
+                    <th>Poin</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="printReport()">Cetak Laporan</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
